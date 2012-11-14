@@ -1,4 +1,6 @@
-
+body {
+	background: url('img/background.png') repeat 100% 100%;
+}
 body, .skeleton, .skeleton td {
 	margin: 0px;
 	padding: 0px;
@@ -7,15 +9,16 @@ body, .skeleton, .skeleton td {
 .skeleton { 
 	width: 800px; 
 	margin: 40px auto;
-	background: url('img/background.png') repeat 100% 100%;
 	border: 1px solid black; 
+	background: url('img/balloon.png') repeat 100% 100%;
+	background-size: 100% 100%
 }
 .skeleton td { 
 	vertical-align: top;
 }
 .header {
 	font-family: 'Mr Dafoe', cursive;
-	border-bottom: 1px solid black;
+	/*border-bottom: 1px solid black;*/
 	text-align: center;
 	vertical-align: middle;
 	font-size: 4em;
@@ -25,13 +28,15 @@ body, .skeleton, .skeleton td {
 	font-family: arial;
 	font-size: .4em;
 	text-align: center;
+	display: none;
 }
 .menu {
-	border-right: 1px solid black;
+	/*border-right: 1px solid black;*/
 	width: 200px;
 	height: 1000px;
 }
 .menu a {
+	padding-left: 30px;
 	display: block;
 	text-decoration: none;
 	color: black;
@@ -39,5 +44,8 @@ body, .skeleton, .skeleton td {
 	font-size: 1.2em;
 }
 .content {
-	margin: 30px;
+	margin: 13px 30px;
+}
+.content h4 {
+	margin-top: 0px;
 }
