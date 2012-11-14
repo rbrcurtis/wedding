@@ -10,7 +10,7 @@ body, .skeleton, .skeleton td {
 	width: 800px; 
 	margin: 40px auto;
 	border: 1px solid black; 
-	background: url('img/balloon.png') repeat 100% 100%;
+	background: url('img/skel-bg.png') repeat 100% 100%;
 	background-size: 100% 100%
 }
 .skeleton td { 
@@ -48,4 +48,11 @@ body, .skeleton, .skeleton td {
 }
 .content h4 {
 	margin-top: 0px;
+}
+.balloon {
+	position: fixed;
+	right: 50px;
+	top: 100px;
+	z-index: -1;
+
 }
