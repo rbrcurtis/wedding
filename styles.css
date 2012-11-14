@@ -14,6 +14,7 @@ body, .skeleton, .skeleton td {
 	vertical-align: top;
 }
 .header {
+	font-family: 'Mr Dafoe', cursive;
 	border-bottom: 1px solid black;
 	text-align: center;
 	vertical-align: middle;
