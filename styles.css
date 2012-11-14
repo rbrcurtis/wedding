@@ -21,6 +21,11 @@ body, .skeleton, .skeleton td {
 	font-size: 4em;
 	padding: 50px;
 }
+.subheader {
+	font-family: arial;
+	font-size: .4em;
+	text-align: center;
+}
 .menu {
 	border-right: 1px solid black;
 	width: 200px;
