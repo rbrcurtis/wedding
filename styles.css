@@ -1,0 +1,37 @@
+
+body, .skeleton, .skeleton td {
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.1em;
+}
+.skeleton { 
+	width: 800px; 
+	margin: 40px auto;
+	background: url('img/background.png') repeat 100% 100%;
+	border: 1px solid black; 
+}
+.skeleton td { 
+	vertical-align: top;
+}
+.header {
+	border-bottom: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 4em;
+	padding: 50px;
+}
+.menu {
+	border-right: 1px solid black;
+	width: 200px;
+	height: 1000px;
+}
+.menu a {
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin: 10px 15px;
+	font-size: 1.2em;
+}
+.content {
+	margin: 30px;
+}
