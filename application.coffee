@@ -1,5 +1,5 @@
 content = $('.content')
-debugOn = true
+debugOn = false
 debug = ->
 	if debugOn then console.log arguments...
 
