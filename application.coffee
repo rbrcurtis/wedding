@@ -14,7 +14,7 @@ route = ->
 		content.html html
 
 		if hash is 'guestbook'
-			$.ajax('http://'+document.location.hostname+':2000').success (entries) ->
+			$.ajax('http://'+document.location.hostname+':8000').success (entries) ->
 				for entry in entries
 					$('.entries').append("<tr><td class='text'>#{clean(entry.text)}</td></tr><tr><td class='name'>by #{clean(entry.name)}</td></tr>")
 
@@ -29,7 +29,7 @@ clean = (str) ->
 window.signBook = ->
 	message = $("#guest-book").serialize()
 	debug 'sign', message
-	$.ajax 'http://'+document.location.hostname+':2000', 
+	$.ajax 'http://'+document.location.hostname+':8000', 
 		type: 'POST'
 		data: message
 		success: -> route()
