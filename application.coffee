@@ -1,5 +1,5 @@
 content = $('.content')
-debugOn = false
+debugOn = true
 debug = ->
 	if debugOn then console.log arguments...
 
@@ -13,6 +13,23 @@ route = ->
 		debug 'got page', html
 		content.html html
 
+		if hash is 'guestbook'
+			$.ajax('http://'+document.location.hostname+':2000').success (entries) ->
+				for entry in entries
+					$('.entries').append("<tr><td class='text'>#{clean(entry.text)}</td></tr><tr><td class='name'>by #{clean(entry.name)}</td></tr>")
+
 $ ->
 	$(window).hashchange -> route()
 	route()
+
+
+clean = (str) ->
+	encodeURI(str).replace(/%20/g,' ')
+
+window.signBook = ->
+	message = $("#guest-book").serialize()
+	debug 'sign', message
+	$.ajax 'http://'+document.location.hostname+':2000', 
+		type: 'POST'
+		data: message
+		success: -> route()

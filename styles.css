@@ -33,7 +33,7 @@ body, .skeleton, .skeleton td {
 .menu {
 	/*border-right: 1px solid black;*/
 	width: 200px;
-	height: 1000px;
+	height: 800px;
 }
 .menu a {
 	padding-left: 30px;
@@ -55,4 +55,24 @@ body, .skeleton, .skeleton td {
 	top: 100px;
 	z-index: -1;
 
+}
+
+#guest-book textarea {
+	width: 400px;
+	height: 100px;
+
+}
+#guest-book input {
+	width: 400px;
+}
+.entries .name {
+	font-size: .8em;
+	padding: 5px;
+}
+.entries .text {
+	border-top: 1px dashed #faa;
+	padding: 5px;
+}
+.entries {
+	border-bottom: 1px dashed #faa;
 }
