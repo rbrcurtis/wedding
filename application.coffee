@@ -15,6 +15,7 @@ route = ->
 
 		if hash is 'guestbook'
 			$.ajax('http://'+document.location.hostname+':8000').success (entries) ->
+				if typeof entries is 'string' then entries = JSON.parse entries
 				for entry in entries
 					$('.entries').append("<tr><td class='text'>#{clean(entry.text)}</td></tr><tr><td class='name'>by #{clean(entry.name)}</td></tr>")
 
