@@ -29,6 +29,7 @@ clean = (str) ->
 
 window.signBook = ->
 	message = $("#guest-book").serialize()
+	unless message.name? and message.text? then return alert "Please fill in both the name and message boxes."
 	debug 'sign', message
 	$.ajax 'http://'+document.location.hostname+':8000', 
 		type: 'POST'
